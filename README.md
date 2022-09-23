@@ -1,5 +1,7 @@
 # 剪贴板记录
 
+![image](/doc/image/window.jpg)
+
 ## 使用组件
 - tauri
 - react-ts
