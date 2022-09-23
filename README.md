@@ -1,8 +1,8 @@
-# 剪贴板记录
+# Clipboard Record Tool
 
 ![image](/doc/image/window.jpg)
 
-## 使用组件
+## Components
 - tauri
 - react-ts
 - sqlite
@@ -19,4 +19,4 @@ yarn tauri dev
 yarn tauri build
 ```
 
-> 备注：mac系统成功编译，windows未测试
+> PS：Successfully built on Mac, Not sure if it suit for Windows
