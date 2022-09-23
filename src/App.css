@@ -1,0 +1,6 @@
+/* @import 'antd/dist/antd.css'; */
+
+::-webkit-scrollbar {
+  display: none;
+  /* Chrome Safari */
+}
