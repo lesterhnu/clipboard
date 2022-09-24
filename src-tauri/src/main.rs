@@ -2,12 +2,12 @@
     all(not(debug_assertions), target_os = "windows"),
     windows_subsystem = "windows"
 )]
-use std::env;
 use tauri::{
     App,AppHandle, SystemTray, SystemTrayEvent,
     SystemTrayEvent::{LeftClick, MenuItemClick, RightClick},
     Wry, Manager
 };
+#[allow(unused)]
 use tauri::{CustomMenuItem, SystemTrayMenu};
 use std::fs::File;
 use std::path::Path;
@@ -75,8 +75,10 @@ fn set_up(app: &mut App){
 }
 
 fn system_tray()->tauri::SystemTray{
-    let quit = CustomMenuItem::new("quit".to_string(), "退出");
-    let hide = CustomMenuItem::new("hide".to_string(), "隐藏");
-    let tray_menu = SystemTrayMenu::new().add_item(quit).add_item(hide);
+    // let quit = CustomMenuItem::new("quit".to_string(), "退出");
+    // let hide = CustomMenuItem::new("hide".to_string(), "隐藏");
+    // let tray_menu = SystemTrayMenu::new().add_item(quit).add_item(hide);
+    let tray_menu = SystemTrayMenu::new();
+    // SystemTray::new().with_menu(tray_menu)
     SystemTray::new().with_menu(tray_menu)
 }
