@@ -11,9 +11,11 @@
   },
   "tauri": {
     "allowlist": {
-      "all": true,
+      "clipboard": {
+        "readText": true,
+        "writeText": true
+      },
       "window": {
-        "all":true,
         "show": true,
         "hide":true,
         "setSkipTaskbar":true
