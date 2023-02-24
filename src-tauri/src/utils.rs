@@ -1,8 +1,8 @@
-use crypto::md5::Md5;
-use crypto::digest::Digest;
+use md5::{Md5, Digest};
 
 pub fn md5(s:&str)->String{
     let mut hasher = Md5::new();
-    hasher.input_str(s);
-    hasher.result_str()
+    hasher.update(s);
+    let result = format!("{:x}", hasher.finalize());
+    return result;
 }
